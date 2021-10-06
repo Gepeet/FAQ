@@ -1,0 +1,123 @@
+*,
+*::after,
+*::before {
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /* text */
+    --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    /* gradient */
+    /* background-color */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+
+    /* neutral */
+    /* text */
+    --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --Dark-grayish-blue: hsl(240, 6%, 50%);
+
+    /* dividers */
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+
+}
+
+/* font */
+/* font size: 12px */
+
+/* - font-family: 'Kumbh Sans', sans-serif; -*/
+
+body {
+    padding: 200px 0;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-image: linear-gradient(var(--Soft-violet),var(--Soft-blue));
+    background-repeat: no-repeat;
+    flex-direction: row;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+
+section {
+    background-color: white;
+    height: max-content;
+    width: 450px;
+    border-radius: 30px;
+}
+
+.left-images {
+    position: relative;
+    height: 180px;
+}
+
+.left-images .shadow {
+    position: absolute;
+    left: 20px;
+    width: 90%;
+    padding: 0px 30px;
+}
+
+.left-images .illustration {
+    position: absolute;
+    top: -158px;
+    left: -20px;
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.right-faq {
+    text-align: center;
+    font-size: 25px;
+}
+
+.faq-1 {
+    margin: 30px 40px;
+    padding-bottom: 10px;
+    height: max-content;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: var(--Light-grayish-blue) 1px solid;
+}
+
+.hidden {
+    color: var(--Dark-grayish-blue);
+    font-weight: 400;
+    font-size: 14px;
+    display: none; 
+    height: max-content;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    line-break: auto;
+}
+
+.arrow:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.arrow:focus + .hidden{
+    display: block;
+}
+
+.arrow:focus + p{
+    font-weight: 700;
+}
+
+.hidden:focus-visible + .question{
+    font-weight: 700;
+}
+
+@media (min-width: 1200px){
+
+section{
+    flex-direction: row;
+    max-width: 800px;   
+}
